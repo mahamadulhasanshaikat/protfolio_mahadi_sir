@@ -1,18 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cloudflare Pages Static Export এর জন্য প্রয়োজনীয় কনফিগ
+  // Cloudflare Pages Static Export এর জন্য আবশ্যক
   output: "export",
   images: {
     unoptimized: true,
   },
 
-  /* আপনার বিদ্যমান কনফিগ অপশনগুলো */
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+
   turbopack: {
     rules: {
       "*.css": {
