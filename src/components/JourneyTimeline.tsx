@@ -229,7 +229,7 @@ export default function JourneyTimeline() {
     <section id="journey" className="relative py-24 max-w-5xl mx-auto px-6 border-t border-slate-200 dark:border-slate-800 scroll-mt-20">
       
       {/* Background kinetic dots */}
-      <div className="absolute inset-0 bg-[radial-gradient(#3b82f60a_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f610_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(#3b82f60a_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f610_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none -z-10" />
 
       {/* Header Area */}
       <div className="space-y-3 text-center mb-12 relative">
@@ -267,13 +267,13 @@ export default function JourneyTimeline() {
             {filter === 'professional' && (
               <motion.div
                 layoutId="timelineActivePill"
-                className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md shadow-indigo-500/20"
+                className="absolute inset-0 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 shadow-md shadow-indigo-500/20"
                 transition={{ type: 'spring', stiffness: 500, damping: 32 }}
               />
             )}
             <span className="relative z-10 flex items-center gap-2 font-semibold tracking-wide">
               <Briefcase className={`w-4 h-4 transition-transform duration-300 ${filter === 'professional' ? '-rotate-6' : ''}`} />
-              Professional & Labs
+              Professional
             </span>
           </motion.button>
 
@@ -291,7 +291,7 @@ export default function JourneyTimeline() {
             {filter === 'academic' && (
               <motion.div
                 layoutId="timelineActivePill"
-                className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 shadow-md shadow-emerald-500/20"
+                className="absolute inset-0 rounded-xl bg-linear-to-r from-emerald-600 to-teal-600 shadow-md shadow-emerald-500/20"
                 transition={{ type: 'spring', stiffness: 500, damping: 32 }}
               />
             )}
